@@ -17,5 +17,10 @@
     "address": "Address",
     "email": "Email",
     "phoneNumber": "Phone number"
+  },
+  "language": {
+    "en": "English",
+    "fr": "French",
+    "pl": "Polish"
   }
 }

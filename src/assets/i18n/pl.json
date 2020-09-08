@@ -1,13 +1,26 @@
 {
   "nav": {
-    "title": "Contacts App",
-    "contacts": "Contacts",
-    "skills": "Skills"
+    "title": "Aplikacja Kontakty",
+    "contacts": "Kontakty",
+    "skills": "Umiejętności"
   },
   "login": {
     "welcome": "Cześć, zaloguj się żeby zobaczyć swoje kontakty.",
-    "username" : "Użytkownik",
+    "username": "Użytkownik",
     "password": "Hasło",
     "login-button": "Zaloguj"
+  },
+  "contact": {
+    "id": "Id",
+    "firstname": "Imię",
+    "lastname": "Nazwisko",
+    "address": "Adres",
+    "email": "E-mail",
+    "phoneNumber": "Numer telefonu"
+  },
+  "language": {
+    "en": "Angielski",
+    "fr": "Francuski",
+    "pl": "Polski"
   }
 }

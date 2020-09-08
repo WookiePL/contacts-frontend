@@ -10,6 +10,7 @@ import { LoginComponent } from './login/login.component';
 import { FormsModule } from '@angular/forms';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -23,7 +24,9 @@ export function createTranslateLoader(http: HttpClient) {
     LoginComponent
   ],
   imports: [
-    BrowserModule, HttpClientModule, FormsModule,
+    BrowserModule,
+    HttpClientModule,
+    FormsModule,
     RouterModule.forRoot([
       { path: 'contacts', component: ContactListComponent },
       // { path: '', redirectTo: 'contacts', pathMatch: 'full' },
@@ -38,7 +41,8 @@ export function createTranslateLoader(http: HttpClient) {
         useFactory: (createTranslateLoader),
         deps: [HttpClient]
       }
-    })
+    }),
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent],

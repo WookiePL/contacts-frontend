@@ -4,6 +4,18 @@
     <li><a class="nav-link" routerLinkActive="active" [routerLink]="['/contacts']">{{'nav.contacts' | translate}}</a> </li>
     <li><a class="nav-link" routerLinkActive="active" [routerLink]="['/skills']">{{'nav.skills' | translate}}</a> </li>
   </ul>
+  <div ngbDropdown placement="bottom-right">
+    <button class="btn select-text" id="navbarDropdown" role="button" ngbDropdownToggle>
+      {{ 'language.en' | translate }}
+    </button>
+    <div class="dropdown-menu" ngbDropdownMenu>
+      <button *ngFor="let lang of languages"
+              class="dropdown-item"
+              (click)="selectLanguage(lang)">
+        {{ 'language.' + lang | translate }}
+      </button>
+    </div>
+  </div>
 </nav>
 <div class="container">
   <router-outlet></router-outlet>
