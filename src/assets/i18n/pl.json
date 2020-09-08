@@ -1,0 +1,13 @@
+{
+  "nav": {
+    "title": "Contacts App",
+    "contacts": "Contacts",
+    "skills": "Skills"
+  },
+  "login": {
+    "welcome": "Cześć, zaloguj się żeby zobaczyć swoje kontakty.",
+    "username" : "Użytkownik",
+    "password": "Hasło",
+    "login-button": "Zaloguj"
+  }
+}

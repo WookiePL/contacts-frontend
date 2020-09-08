@@ -1,8 +1,8 @@
 <nav class="navbar navbar-expand">
-  <a class="navbar-brand navbar-brand bg-light" routerLinkActive="active" [routerLink]="['/']">Contacts App</a>
+  <a class="navbar-brand navbar-brand bg-light" routerLinkActive="active" [routerLink]="['/']">{{'nav.title' | translate}}</a>
   <ul class="nav nav-pills">
-    <li><a class="nav-link" routerLinkActive="active" [routerLink]="['/contacts']">Contacts</a> </li>
-    <li><a class="nav-link" routerLinkActive="active" [routerLink]="['/skills']">Skills</a> </li>
+    <li><a class="nav-link" routerLinkActive="active" [routerLink]="['/contacts']">{{'nav.contacts' | translate}}</a> </li>
+    <li><a class="nav-link" routerLinkActive="active" [routerLink]="['/skills']">{{'nav.skills' | translate}}</a> </li>
   </ul>
 </nav>
 <div class="container">

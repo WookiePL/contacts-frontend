@@ -1,0 +1,21 @@
+{
+  "nav": {
+    "title": "Contacts App",
+    "contacts": "Contacts",
+    "skills": "Skills"
+  },
+  "login": {
+    "welcome": "Hi there, please login to view your contacts.",
+    "username" : "Username",
+    "password": "Password",
+    "login-button": "Login"
+  },
+  "contact": {
+    "id": "Id",
+    "firstname": "Firstname",
+    "lastname": "Lastname",
+    "address": "Address",
+    "email": "Email",
+    "phoneNumber": "Phone number"
+  }
+}
