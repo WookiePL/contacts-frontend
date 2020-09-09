@@ -10,11 +10,13 @@ import { Languages } from './language.enum';
 export class AppComponent {
   title = 'contacts-frontend';
   languages = Object.keys(Languages);
+  selectedLang = 'en';
 
   constructor(private translateService: TranslateService) {
   }
 
-  selectLanguage(lang: string) {
+  selectLanguage(lang: string): void {
     this.translateService.use(lang);
+    this.selectedLang = lang;
   }
 }

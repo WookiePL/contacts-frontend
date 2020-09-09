@@ -11,6 +11,7 @@ import { FormsModule } from '@angular/forms';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ConfirmationPopupComponent } from './confirmation-popup/confirmation-popup.component';
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -21,7 +22,8 @@ export function createTranslateLoader(http: HttpClient) {
     AppComponent,
     ContactListComponent,
     HomeComponent,
-    LoginComponent
+    LoginComponent,
+    ConfirmationPopupComponent
   ],
   imports: [
     BrowserModule,

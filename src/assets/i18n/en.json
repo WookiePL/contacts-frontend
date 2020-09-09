@@ -16,11 +16,20 @@
     "lastname": "Lastname",
     "address": "Address",
     "email": "Email",
-    "phoneNumber": "Phone number"
+    "phoneNumber": "Phone number",
+    "button":{
+      "delete": "Delete"
+    },
+    "deleteConfirmation": {
+      "header": "Delete confirmation",
+      "content": "Do you really want to delete this contact?"
+    }
   },
   "language": {
     "en": "English",
     "fr": "French",
     "pl": "Polish"
-  }
+  },
+  "yes": "Yes",
+  "no": "No"
 }

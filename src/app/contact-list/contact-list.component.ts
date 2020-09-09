@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Contact } from '../models/contact';
 import { ContactService } from '../services/contact.service';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { ConfirmationPopupComponent } from '../confirmation-popup/confirmation-popup.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-contact-list',
@@ -10,13 +13,39 @@ import { ContactService } from '../services/contact.service';
 export class ContactListComponent implements OnInit {
   contacts: Contact[];
 
-  constructor(private contactService: ContactService) {
+  constructor(private contactService: ContactService,
+              private modalService: NgbModal,
+              private router: Router) {
+    this.getContacts();
+  }
+
+  private getContacts() {
     this.contactService.getContacts().subscribe(
       contacts => {
         this.contacts = contacts;
       });
   }
-  ngOnInit(): void { }
+
+  ngOnInit(): void {
+  }
+
+  deleteContact(id: number): void {
+    this.openDeleteConfirmation().then(toDelete => {
+      if (toDelete) {
+        this.contactService.delete(id).subscribe(() => {
+          this.getContacts();
+        });
+      }
+    });
+  }
+
+  openDeleteConfirmation(): Promise<any> {
+    const modalRef = this.modalService.open(ConfirmationPopupComponent);
+    modalRef.componentInstance.header = 'contact.deleteConfirmation.header';
+    modalRef.componentInstance.content = 'contact.deleteConfirmation.content';
+    return modalRef.result;
+  }
+
   // ngOnInit(): void {
   //   let url = 'http://localhost:8080/user';
   //
