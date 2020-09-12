@@ -2,7 +2,7 @@
 Simple Angular app to manage contacts. Every contact can have skills assigned.
 This app is written mainly to demonstrate and exercise.
 
-Backend for this app: (https://github.com/WookiePL/contacts-api)
+There is also the backend for this app: [github.com/WookiePL/contacts-api](https://github.com/WookiePL/contacts-api)
 
 ## Standard Angular tips & infos
 
