@@ -12,8 +12,10 @@ import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ConfirmationPopupComponent } from './confirmation-popup/confirmation-popup.component';
+import { SkillListComponent } from './skill-list/skill-list.component';
+import { ContactDetailsComponent } from './contact-details/contact-details.component';
 
-export function createTranslateLoader(http: HttpClient) {
+export function createTranslateLoader(http: HttpClient): TranslateHttpLoader {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
 
@@ -23,7 +25,9 @@ export function createTranslateLoader(http: HttpClient) {
     ContactListComponent,
     HomeComponent,
     LoginComponent,
-    ConfirmationPopupComponent
+    ConfirmationPopupComponent,
+    SkillListComponent,
+    ContactDetailsComponent
   ],
   imports: [
     BrowserModule,
@@ -31,6 +35,8 @@ export function createTranslateLoader(http: HttpClient) {
     FormsModule,
     RouterModule.forRoot([
       { path: 'contacts', component: ContactListComponent },
+      { path: 'contacts/:id', component: ContactDetailsComponent },
+      { path: 'skills', component: SkillListComponent },
       // { path: '', redirectTo: 'contacts', pathMatch: 'full' },
       { path: '', component: HomeComponent },
       { path: 'login', component: LoginComponent },

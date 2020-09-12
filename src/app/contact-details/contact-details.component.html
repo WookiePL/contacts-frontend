@@ -1,0 +1,31 @@
+<div class="card">
+  <div class="card-header">{{'contact.title' | translate}}{{contact.contactId}}
+  </div>
+  <div class="card-body">
+    <div class='row'>
+      <div class='col-md-4'>{{'contact.firstname' | translate}}:</div>
+      <div class='col-md-8'>{{contact.firstname}}</div>
+    </div>
+    <div class='row'>
+      <div class='col-md-4'>{{'contact.lastname' | translate}}:</div>
+      <div class='col-md-8'>{{contact.lastname}}</div>
+    </div>
+    <div class='row'>
+      <div class='col-md-4'>{{'contact.address' | translate}}:</div>
+      <div class='col-md-8'>{{contact.address}}</div>
+    </div>
+    <div class='row'>
+      <div class='col-md-4'>{{'contact.email' | translate}}:</div>
+      <div class='col-md-8'>{{contact.email}}</div>
+    </div>
+    <div class='row'>
+      <div class='col-md-4'>{{'contact.phoneNumber' | translate}}:</div>
+      <div class='col-md-8'>{{contact.phoneNumber}}</div>
+    </div>
+  </div>
+  <div class="card-footer">
+    <button class="btn btn-secondary" (click)="goBack()">
+      {{'contact.button.back' | translate}}
+    </button>
+  </div>
+</div>

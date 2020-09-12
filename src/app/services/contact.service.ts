@@ -22,6 +22,16 @@ export class ContactService {
     return this.http.get<Contact[]>(this.contactsUrl, options);
   }
 
+  getContact(id: number): Observable<Contact> {
+
+    const headers: HttpHeaders = new HttpHeaders({
+      'Authorization': 'Basic ' + sessionStorage.getItem('token')
+    });
+
+    const options = { headers };
+    return this.http.get<Contact>(this.contactsUrl + '/' + id, options);
+  }
+
 
   delete(id: number): Observable<Contact> {
 

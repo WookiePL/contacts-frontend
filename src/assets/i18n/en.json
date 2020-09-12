@@ -18,12 +18,14 @@
     "email": "Email",
     "phoneNumber": "Phone number",
     "button":{
-      "delete": "Delete"
+      "delete": "Delete",
+      "back": "Back"
     },
     "deleteConfirmation": {
       "header": "Delete confirmation",
       "content": "Do you really want to delete this contact?"
-    }
+    },
+    "title": "Contact nr "
   },
   "language": {
     "en": "English",

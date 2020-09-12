@@ -18,12 +18,14 @@
     "email": "Email",
     "phoneNumber": "Numéro de téléphone",
     "button":{
-      "delete": "Supprimer"
+      "delete": "Supprimer",
+      "back": "Retour"
     },
     "deleteConfirmation": {
       "header": "Confirmer la suppresion",
       "content": "Voulez-vous vraiment supprimer ce contact?"
-    }
+    },
+    "title": "Numéro de contact "
   },
   "language": {
     "en": "Anglais",
